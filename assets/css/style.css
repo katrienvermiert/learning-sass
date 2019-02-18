@@ -1,0 +1,108 @@
+header {
+  background-color: black;
+  text-align: center;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header li {
+  display: inline-block;
+  padding: 6px 12px;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 4em;
+}
+header a:hover {
+  color: yellow;
+}
+header a:active {
+  color: red;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 300px 300px;
+  background-color: red;
+}
+.container .box1, .container .box4 {
+  border: 1px solid blue;
+  background: -webkit-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  display: flex;
+}
+.container .box2 {
+  border: 1px solid green;
+  background: #c9de96;
+  display: flex;
+}
+.container .box3 {
+  border: 1px solid green;
+  background: #c9de96;
+  display: flex;
+}
+.container .box4 {
+  display: flex;
+}
+
+.button4, .button3, .button2, .button1 {
+  padding: 10px 30px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  margin-left: 280px;
+  align-self: center;
+}
+
+.button1 {
+  background-color: red;
+}
+
+.button2 {
+  background-color: blue;
+}
+
+.button3 {
+  background-color: yellow;
+}
+
+.button4 {
+  background-color: green;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer li {
+  display: inline-block;
+  padding: 6px 12px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 4em;
+}
+footer a:hover {
+  color: yellow;
+}
+footer a:active {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

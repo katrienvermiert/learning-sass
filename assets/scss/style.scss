@@ -1,0 +1,130 @@
+$background: black;
+$decoration: none;
+$border-color: blue;
+
+@mixin box ($border){
+     border: 1px solid $border;
+     background: #c9de96;
+     display: flex;
+}
+
+header{
+     background-color: $background;
+     text-align: center;
+     ul{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+     }
+
+     li{
+          display: inline-block;
+          padding: 6px 12px;
+     }
+
+     a{
+          text-decoration: $decoration;
+          color: white;
+          font: {
+               family: arial;
+               weight: bold;
+               size: (5/5)*4em;
+          }
+          &:hover{
+               color: yellow;
+          }
+          &:active{
+               color: red;
+          }
+     }
+}
+
+.container{
+     display:grid;
+     grid-template-columns: 50% 50%;
+     grid-template-rows: 300px 300px;
+     background-color: red;
+
+    
+     .box1 {
+          border: 1px solid $border-color;
+          background: -webkit-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+          background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+          background: linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%); 
+          display: flex;
+     }
+     .box2 {
+          @include box(green);
+     }
+     .box3 {
+          @include box (green);        
+     }
+     .box4 {
+          @extend .box1;
+          display: flex;
+     }
+
+}     
+
+%uberbutton{
+     padding: 10px 30px;
+     border: 1px solid $border-color;
+     border-radius: 10px;
+     text-decoration: $decoration;
+     color: white;
+     margin-left: 280px;
+     align-self: center;
+}
+
+.button1{
+     @extend %uberbutton;
+     background-color: red;
+}
+
+.button2{
+     @extend %uberbutton;
+     background-color: blue;
+}
+
+.button3{
+     @extend %uberbutton;
+     background-color:  yellow;
+}
+
+.button4{
+     @extend %uberbutton;
+     background-color:  green;
+     
+}
+
+footer{
+     background-color: $background;
+     text-align: center;
+     ul{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+     }
+
+     li{
+          display: inline-block;
+          padding: 6px 12px;
+          
+     }
+
+     a{
+          text-decoration: $decoration;
+          color: white;
+          font: {
+               family: arial;
+               weight: bold;
+               size: (5/5)*4em;
+          }
+          &:hover{
+               color: yellow;
+          }
+          &:active{
+               color: red;
+          }
+     }
+}
